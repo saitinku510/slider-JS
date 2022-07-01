@@ -12,17 +12,26 @@
     <section>
         <div class="container">
             <div class="cogno">
-                <div class="cognoTabTitles active">
+                <div class="cognoTabTitles active" id="tab1">
                     <img src="images/chat.png" alt="Logo"><h2>Broadcast messages</h2>
-                </div>  
-                <div class="cognoTabTitles">
+                    <div class="progress"> 
+                        <div class="progress__bar"></div>
+                    </div>
+                </div>
+                <div class="cognoTabTitles" id="tab2">
                    <img src="images/profile.png" alt="Logo"> <h2>Transform Customer Experience</h2>
+                   <div class="progress"> 
+                    <div class="progress__bar"></div>
+                </div>
                 </div>  
-                <div class="cognoTabTitles">
+                <div class="cognoTabTitles" id="tab3">
                     <img src="images/discovery.png" alt="Logo"><h2>End to End customer journey</h2>
+                    <div class="progress"> 
+                        <div class="progress__bar"></div>
+                    </div>
                 </div>  
             </div>
-            <div class="cognoTabContent active">
+            <div id="tabContent1" class="cognoTabContent active">
                 <div class="cognoTablistcontent">
                     <p>Broadcast new products and offers for customers with rich, personalized messages to drive sales</p>
                     <ul>
@@ -36,7 +45,7 @@
                     <img src="images/broadcastmessages.png" alt="">
                 </div>
             </div>
-            <div class="cognoTabContent">
+            <div id="tabContent2" class="cognoTabContent">
                 <div class="cognoTablistcontent">
                     <p>Engage Customers at every step of their journey</p>
                     <ul>
@@ -51,7 +60,7 @@
                     <img src="images/endtoendcustomrjourney.png" alt="">
                 </div>
             </div>
-            <div class="cognoTabContent">
+            <div id="tabContent3" class="cognoTabContent">
                 <div class="cognoTablistcontent">
                     <p>Set up your shop on the biggest messaging app in the world to increase reach and conversion</p>
                     <ul>
@@ -69,6 +78,8 @@
         </div>
     </section>
 
+
+    
 
     <script src="js/script.js"></script>
 </body>
