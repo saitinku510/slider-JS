@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif; }
+
+img {
+  max-width: 100%; }
+
+section {
+  padding: 100px 0;
+  width: 100%; }
+  section .container {
+    margin: auto;
+    padding: 0 15px; }
+    @media (min-width: 1240px) {
+      section .container {
+        max-width: 1200px;
+        padding: 0; } }
+  section .cogno {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer; }
+    section .cogno .cognoTabTitles {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding: 14px 20px; }
+      section .cogno .cognoTabTitles.active {
+        background: linear-gradient(180deg, rgba(226, 237, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+        filter: drop-shadow(0px 12px 25px rgba(61, 75, 92, 0.05));
+        background-color: #fefeff;
+        border-radius: 12px; }
+      section .cogno .cognoTabTitles img {
+        max-width: 20px; }
+      section .cogno .cognoTabTitles h2 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #000000; }
+  section .cognoTabContent {
+    padding: 50px;
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    section .cognoTabContent.active {
+      display: flex; }
+    section .cognoTabContent .cognoTablistcontent {
+      max-width: 533px;
+      width: 100%; }
+    section .cognoTabContent p {
+      padding-bottom: 40px;
+      font-weight: 500;
+      font-size: 18px;
+      opacity: 0.8;
+      color: #000000; }
+    section .cognoTabContent ul {
+      list-style: none; }
+      section .cognoTabContent ul li {
+        padding-bottom: 24px;
+        padding-left: 45px;
+        font-weight: 500;
+        font-size: 16px;
+        opacity: .8;
+        color: #000000;
+        position: relative; }
+        section .cognoTabContent ul li::before {
+          content: url(../images/tick.svg);
+          position: absolute;
+          left: 0; }
+    section .cognoTabContent .cognoTabImage {
+      max-width: 487px;
+      width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
