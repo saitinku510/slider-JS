@@ -65,11 +65,11 @@ section {
     display: none;
     justify-content: space-between;
     flex-wrap: wrap;
+    transition: all 1s ease;
     transform: translateX(100%); }
     section .cognoTabContent.active {
       display: flex;
-      transform: translateX(0%);
-      transition: all 1s ease; }
+      transform: translateX(0); }
     section .cognoTabContent .cognoTablistcontent {
       max-width: 533px;
       width: 100%; }
