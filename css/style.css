@@ -61,7 +61,8 @@ section {
         color: #000000;
         padding-left: 15px; }
   section .positioned {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
   section .cognoTabContent {
     padding: 50px;
     width: 100%;
@@ -77,7 +78,10 @@ section {
     section .cognoTabContent.active {
       display: flex;
       transform: translateX(0%);
-      opacity: 1; }
+      opacity: 1;
+      position: relative; }
+    section .cognoTabContent.prev {
+      transform: translateX(-100%); }
     section .cognoTabContent .cognoTablistcontent {
       max-width: 533px;
       width: 100%; }

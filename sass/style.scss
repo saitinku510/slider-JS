@@ -82,6 +82,7 @@ section{
     }
     .positioned{
         position: relative;
+        overflow: hidden;
     }
     .cognoTabContent{
         padding: 50px;
@@ -99,6 +100,10 @@ section{
             display: flex;
             transform: translateX(0%);
             opacity: 1;
+            position: relative;
+        }
+        &.prev{
+            transform: translateX(-100%);
         }
         .cognoTablistcontent{
             max-width: 533px;

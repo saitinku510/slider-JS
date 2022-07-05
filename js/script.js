@@ -11,31 +11,37 @@ function activeFirstTab(){
     tabTitleOne.classList.add('active');
     tabContentOne.classList.add('active');
 
+
     tabTitleTwo.classList.remove('active');
     tabTitleThree.classList.remove('active');
     tabContentTwo.classList.remove('active');
     tabContentThree.classList.remove('active');
+    tabContentThree.classList.add('prev');
+    tabContentOne.classList.remove('prev');
+    tabContentTwo.classList.remove('prev');
 }
 function activeSecondTab(){
     tabTitleTwo.classList.add('active');
     tabContentTwo.classList.add('active');
-
     tabTitleOne.classList.remove('active');
     tabTitleThree.classList.remove('active');
     tabContentOne.classList.remove('active');
     tabContentThree.classList.remove('active');
+    tabContentOne.classList.add('prev');
+    tabContentTwo.classList.remove('prev');
+    tabContentThree.classList.remove('prev');
 }
 function activeThirdTab(){
     tabTitleThree.classList.add('active');
     tabContentThree.classList.add('active');
-
     tabTitleOne.classList.remove('active');
     tabTitleTwo.classList.remove('active');
     tabContentOne.classList.remove('active');
     tabContentTwo.classList.remove('active');
+    tabContentTwo.classList.add('prev');
+    tabContentOne.classList.remove('prev');
+    tabContentThree.classList.remove('prev');
 }
-
-let active = 0;
 
 function interval(){
     setInterval(timer, count);
@@ -53,51 +59,29 @@ function timer(){
 }
 function changeTabs(c){
     if(c === 0){
-        active = 0;
-        allTabs(active);
-    }
-
-    if(c === 1){
-        active = 1;
-        allTabs(active);
-    }
-
-    if(c === 2){
-        active = 2;
-        allTabs(active);
-    }
-}
-function allTabs(tabs){
-    if(tabs === 0){
         activeFirstTab();
     }
-    if(tabs === 1){
+    if(c === 1){
         activeSecondTab();
     }
-    if(tabs === 2){
+    if(c === 2){
         activeThirdTab();
     }
 }
-function tabClassChange(index){
-    changeTabs(index);
-    if(index === active){
-    }
-    if(index > active){
-        alert('h')
-    }
-    console.log(active);
-}
 
-// tabTitleOne.addEventListener('click', (e) => {
-//     countIncrement = 0;
-//     allTabs(0);
-
-// });
-// tabTitleTwo.addEventListener('click', (e) => {
-//     countIncrement = 0;
-//     allTabs(1);
-// });
-// tabTitleThree.addEventListener('click', (e) => {
-//     countIncrement = 1;
-//     allTabs(2);
-// });
+tabTitleOne.addEventListener('click', (e) => {
+    e.preventDefault();
+    countIncrement = 0;
+    changeTabs(0);
+    
+});
+tabTitleTwo.addEventListener('click', (e) => {
+    e.preventDefault();
+    countIncrement = 0;
+    changeTabs(1);
+});
+tabTitleThree.addEventListener('click', (e) => {
+    e.preventDefault();
+    countIncrement = 1;
+    changeTabs(2);
+});
