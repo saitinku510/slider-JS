@@ -60,16 +60,24 @@ section {
         line-height: 27px;
         color: #000000;
         padding-left: 15px; }
+  section .positioned {
+    position: relative; }
   section .cognoTabContent {
     padding: 50px;
-    display: none;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    transform: translateX(100%);
     transition: all 1s ease;
-    transform: translateX(100%); }
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; }
     section .cognoTabContent.active {
       display: flex;
-      transform: translateX(0); }
+      transform: translateX(0%);
+      opacity: 1; }
     section .cognoTabContent .cognoTablistcontent {
       max-width: 533px;
       width: 100%; }

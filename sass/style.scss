@@ -80,16 +80,25 @@ section{
             }
         }
     }
+    .positioned{
+        position: relative;
+    }
     .cognoTabContent{
         padding: 50px;
-        display: none;
+        width: 100%;
+        display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        transition: all 1s ease;
         transform: translateX(100%);
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
         &.active{
             display: flex;
-            transform: translateX(0);
+            transform: translateX(0%);
+            opacity: 1;
         }
         .cognoTablistcontent{
             max-width: 533px;

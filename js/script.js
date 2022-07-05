@@ -19,6 +19,7 @@ function activeFirstTab(){
 function activeSecondTab(){
     tabTitleTwo.classList.add('active');
     tabContentTwo.classList.add('active');
+
     tabTitleOne.classList.remove('active');
     tabTitleThree.classList.remove('active');
     tabContentOne.classList.remove('active');
@@ -27,11 +28,14 @@ function activeSecondTab(){
 function activeThirdTab(){
     tabTitleThree.classList.add('active');
     tabContentThree.classList.add('active');
+
     tabTitleOne.classList.remove('active');
     tabTitleTwo.classList.remove('active');
     tabContentOne.classList.remove('active');
     tabContentTwo.classList.remove('active');
 }
+
+let active = 0;
 
 function interval(){
     setInterval(timer, count);
@@ -49,28 +53,51 @@ function timer(){
 }
 function changeTabs(c){
     if(c === 0){
+        active = 0;
+        allTabs(active);
+    }
+
+    if(c === 1){
+        active = 1;
+        allTabs(active);
+    }
+
+    if(c === 2){
+        active = 2;
+        allTabs(active);
+    }
+}
+function allTabs(tabs){
+    if(tabs === 0){
         activeFirstTab();
     }
-    if(c === 1){
+    if(tabs === 1){
         activeSecondTab();
     }
-    if(c === 2){
+    if(tabs === 2){
         activeThirdTab();
     }
 }
+function tabClassChange(index){
+    changeTabs(index);
+    if(index === active){
+    }
+    if(index > active){
+        alert('h')
+    }
+    console.log(active);
+}
 
-tabTitleOne.addEventListener('click', (e) => {
-    e.preventDefault();
-    countIncrement = 0;
-    changeTabs(0);
-});
-tabTitleTwo.addEventListener('click', (e) => {
-    e.preventDefault();
-    countIncrement = 0;
-    changeTabs(1);
-});
-tabTitleThree.addEventListener('click', (e) => {
-    e.preventDefault();
-    countIncrement = 1;
-    changeTabs(2);
-});
+// tabTitleOne.addEventListener('click', (e) => {
+//     countIncrement = 0;
+//     allTabs(0);
+
+// });
+// tabTitleTwo.addEventListener('click', (e) => {
+//     countIncrement = 0;
+//     allTabs(1);
+// });
+// tabTitleThree.addEventListener('click', (e) => {
+//     countIncrement = 1;
+//     allTabs(2);
+// });
