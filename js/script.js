@@ -19,7 +19,6 @@ function activeFirstTab(){
 function activeSecondTab(){
     tabTitleTwo.classList.add('active');
     tabContentTwo.classList.add('active');
-
     tabTitleOne.classList.remove('active');
     tabTitleThree.classList.remove('active');
     tabContentOne.classList.remove('active');
@@ -28,20 +27,19 @@ function activeSecondTab(){
 function activeThirdTab(){
     tabTitleThree.classList.add('active');
     tabContentThree.classList.add('active');
-
     tabTitleOne.classList.remove('active');
     tabTitleTwo.classList.remove('active');
     tabContentOne.classList.remove('active');
     tabContentTwo.classList.remove('active');
 }
 
-let active = 0;
+function interval(){
+    setInterval(timer, count);
+}
 
-
-window.onload = setInterval(timer, count);
+window.onload = interval();
 window.onload = changeTabs(countIncrement);
 function timer(){
-    
     countIncrement = countIncrement+1;
     if(countIncrement == 3){
         countIncrement = 0;
@@ -51,44 +49,28 @@ function timer(){
 }
 function changeTabs(c){
     if(c === 0){
-        active = 0;
-        allTabs(active);
-    }
-
-    if(c === 1){
-        active = 1;
-        allTabs(active);
-    }
-
-    if(c === 2){
-        active = 2;
-        allTabs(active);
-    }
-}
-function allTabs(tabs){
-    if(tabs === 0){
         activeFirstTab();
     }
-    if(tabs === 1){
+    if(c === 1){
         activeSecondTab();
     }
-    if(tabs === 2){
+    if(c === 2){
         activeThirdTab();
     }
 }
 
 tabTitleOne.addEventListener('click', (e) => {
+    e.preventDefault();
     countIncrement = 0;
-    // timer()
     changeTabs(0);
 });
 tabTitleTwo.addEventListener('click', (e) => {
+    e.preventDefault();
     countIncrement = 0;
-    // timer()
     changeTabs(1);
 });
 tabTitleThree.addEventListener('click', (e) => {
-    countIncrement = 0;
-    // timer()
+    e.preventDefault();
+    countIncrement = 1;
     changeTabs(2);
 });

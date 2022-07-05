@@ -39,7 +39,7 @@ section {
         section .cogno .cognoTabTitles.active .progress .progress__bar {
           height: 100%;
           width: 0%;
-          animation: fill-bar 3s infinite; }
+          animation: fill-bar 3s linear; }
       section .cogno .cognoTabTitles#tab1.active .progress {
         background-color: #ccadfa; }
       section .cogno .cognoTabTitles#tab1.active .progress .progress__bar {
